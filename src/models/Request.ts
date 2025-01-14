@@ -21,6 +21,6 @@ const requestSchema = new mongoose.Schema({
     }
 }, { timestamps: true });
 
-const Request = model('Request', requestSchema);
+const Request = mongoose.models.Request || model('Request', requestSchema);
 
 export default Request;
